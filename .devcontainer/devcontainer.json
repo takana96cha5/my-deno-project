@@ -1,0 +1,18 @@
+{
+  "name": "Deno",
+  "dockerFile": "Dockerfile",
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash",
+    "deno.enable": true,
+    "deno.lint": true,
+    "deno.unstable": true,
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "denoland.vscode-deno"
+  },
+  "extensions": [
+    "denoland.vscode-deno"
+  ],
+  "shutdownAction": "stopContainer",
+  "postCreateCommand": "deno cache src/main.ts",
+  "remoteUser": "vscode"
+}
